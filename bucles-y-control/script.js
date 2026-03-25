@@ -68,11 +68,27 @@
 // dibujarTriandulo();
 
 // 5. ¿Te atreves con un árbol de Navidad?
-// const lineas = 8;
+// const lineas = 10;
+// const start = "+";
+// const end = "||";
+
 // function dibujarArbol() {
-//   let suma = "";
-//   for (let i = 1; i <= lineas; i++) {
-//     console.log((suma += "*"));
+//   const ancho = lineas;
+
+//   console.log(start.padStart(5));
+
+//   for (let i = 3; i <= lineas; i++) {
+//     if (i % 2 !== 0) {
+//       let espacios = (ancho + i) / 2;
+//       console.log("*".repeat(i).padStart(espacios));
+//     }
 //   }
+//   console.log(end.padStart(6));
 // }
 // dibujarArbol();
+
+// 4. Números primos.
+// Encuentra e imprime todos los números primos dentro del rango [inicio, ﬁn]. 
+// Un número es primo si solo es divisible entre 1 y sí mismo, es decir que no es 
+// divisible por ningún número inferior a él entre dos.
+// Nota: Busca información referente a Math.sqr()
