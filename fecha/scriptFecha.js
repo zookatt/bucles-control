@@ -73,14 +73,4 @@
 //   }
 // }
 
-function operacion(callback) {
-  return callback(2, 3);
-}
 
-const sumar = function (a, b) {
-  let suma = a + b;
-  return suma;
-};
-
-let resultado = operacion(sumar);
-console.log(resultado);
