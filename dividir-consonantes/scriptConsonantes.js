@@ -11,32 +11,35 @@
 //crear variable con valor la cadena que texto "Katia"
 //crear funcion separarVocalesDeConsonantes () que acepta esa variable
 //llamar a esa funcion
-//crear 2 arrays: Vocales y Consonsntes
+//crear 2 arrays o en este caso 2 variables strings: Vocales y Consonsntes
 //crear variable resultado
 //dentro de funcion - separar cadena por letras
 //                  - iterar sobre cada letra y decidir si es vocal - anadir al array Vocales
 //                  - y si no es que es Consonante - anadir al array Consonantes
-//guardar en variable resultado = concatenar 2 arrays: Vocales + Consonantes
+//guardar en variable resultado = concatenar 2 strings: Vocales + Consonantes
 //mostrar resultado por la consola
 
-let texto = "Katia";
-const arrVocales = [];
-const arrConsonantes = [];
+let texto = prompt("Introduce tu palabra");
+// const arrVocales = [];
+// const arrConsonantes = [];
+
 let letras = texto.toLowerCase().split("");
-console.log(letras);
+alert(letras);
 let resultado = "";
 
 function separarVocalesDeConsonantes(letras) {
+  let miVocales = "";
+  let miConsonantes = "";
   for (let i = 0; i < letras.length; i++) {
     const vocales = "aeiouáéíóú";
     if (vocales.includes(letras[i])) {
-      arrVocales.push(letras[i]);
+      miVocales += letras[i];
     } else {
-      arrConsonantes.push(letras[i]);
+      miConsonantes += letras[i];
     }
   }
-  resultado = arrVocales.join("") + arrConsonantes.join("");
-  console.log(resultado);
+  return miVocales + miConsonantes;
 }
 
-separarVocalesDeConsonantes(letras);
+resultado = separarVocalesDeConsonantes(letras);
+alert(resultado);
